@@ -17,29 +17,35 @@ function kjop() {
         Telefonnr: telfonnr,
         Epost: Epost
     };
+    bilettliste.push(bilett);
+    if (tall<=0){
 
-    if (!fornavn||!Etternavn||!telfonnr){
+        document.getElementById("bytteut antall").innerHTML="Du må skrive inn et posetift tall"
+    }
+    if (!fornavn){
 
-        alert("du må fylle ut alle boksende");
+        document.getElementById("bytteut fornavn").innerHTML="du må fylle ut fornavnet ditt"
+    }
+    if (!Etternavn){
+        document.getElementById("bytteut etternavn").innerHTML="du må fylle ut etternavnet ditt"
     }
 
-    if (Epost==null) {
+    if (!Epost) {
 
-        alert("Vennligst oppgi en gyldig e-postadresse.");
+        document.getElementById("bytteut epost").innerHTML="Vennligst oppgi en gyldig e-postadresse"
     }
 
-    if (isNaN(telfonnr)){
+    if (telfonnr<=0){
 
-        alert("du må skrive inn et tall")
+        document.getElementById("bytteuttelefonnr").innerHTML="Du må skrive inn et posetift tall"
     }
 
     if (!film){
 
-        alert("du må velge en film")
+        document.getElementById("bytteut film").innerHTML="du må velge en film"
     }
 
     let ut="";
-    bilettliste.push(bilett);
     for (let i of bilettliste){
         ut+="Film: "+i.Film+"<br>"+"Antall: "+i.antall+"<br>"+"Fornavn: "+i.Fornavn+"<br>"+" Etternavn: "+i.Etternavn+"<br>"+
             "Telefonnr: "+telfonnr+"<br>"+"Epost: "+i.Epost+"<hr>"
@@ -47,12 +53,12 @@ function kjop() {
 
     document.getElementById("bytteut").innerHTML=ut
 
-//tømmer fælta
-    document.getElementById('Fornavn').value = '';
-    document.getElementById('Etternavn').value = '';
-    document.getElementById('Telefonnr').value = '';
-    document.getElementById('Epost').value = '';
-    document.getElementById('antall').value = '';
+//tømmær fælta
+    document.getElementById('Fornavn').value = "";
+    document.getElementById('Etternavn').value = "";
+    document.getElementById('Telefonnr').value = "";
+    document.getElementById('Epost').value = "";
+    document.getElementById('antall').value = "";
 }
 function slett() {
     bilettliste.length=0;
