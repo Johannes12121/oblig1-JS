@@ -20,24 +20,25 @@ function kjop() {
     bilettliste.push(bilett);
     if (tall<=0){
 
-        document.getElementById("bytteut antall").innerHTML="Du må skrive inn et posetift tall"
+        document.getElementById("bytteut antall").innerHTML="Du må skrive inn et posetift tall";
     }
     if (!fornavn){
 
-        document.getElementById("bytteut fornavn").innerHTML="du må fylle ut fornavnet ditt"
+        document.getElementById("bytteut fornavn").innerHTML="du må fylle ut fornavnet ditt";
     }
     if (!Etternavn){
-        document.getElementById("bytteut etternavn").innerHTML="du må fylle ut etternavnet ditt"
+
+        document.getElementById("bytteut etternavn").innerHTML="du må fylle ut etternavnet ditt";
     }
 
     if (!Epost) {
 
-        document.getElementById("bytteut epost").innerHTML="Vennligst oppgi en gyldig e-postadresse"
+        document.getElementById("bytteut epost").innerHTML="Vennligst oppgi en gyldig e-postadresse";
     }
 
     if (telfonnr<=0){
 
-        document.getElementById("bytteuttelefonnr").innerHTML="Du må skrive inn et posetift tall"
+        document.getElementById("bytteuttelefonnr").innerHTML="Du må skrive inn et posetift tall";
     }
 
     if (!film){
