@@ -63,6 +63,7 @@ function kjop() {
     document.getElementById('Telefonnr').value = "";
     document.getElementById('Epost').value = "";
     document.getElementById('antall').value = "";
+    document.getElementById('velgFilm').value = "";
 }
 
 function slett() {
