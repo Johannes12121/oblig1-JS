@@ -17,36 +17,39 @@ function kjop() {
         Telefonnr: telfonnr,
         Epost: Epost
     };
-    bilettliste.push(bilett);
+    let feil=false;
     if (tall<=0){
-
-        document.getElementById("bytteut antall").innerHTML="Du må skrive inn et posetift tall";
+        feil=true
+        document.getElementById("bytteut_antall").innerHTML="Du må skrive inn et posetift tall";
     }
     if (!fornavn){
-
-        document.getElementById("bytteut fornavn").innerHTML="du må fylle ut fornavnet ditt";
+        feil=true
+        document.getElementById("bytteut_fornavn").innerHTML="du må fylle ut fornavnet ditt";
     }
     if (!Etternavn){
-
-        document.getElementById("bytteut etternavn").innerHTML="du må fylle ut etternavnet ditt";
+        feil=true
+        document.getElementById("bytteut_etternavn").innerHTML="du må fylle ut etternavnet ditt";
     }
 
     if (!Epost) {
-
-        document.getElementById("bytteut epost").innerHTML="Vennligst oppgi en gyldig e-postadresse";
+        feil=true
+        document.getElementById("bytteut_epost").innerHTML="Vennligst oppgi en gyldig e-postadresse";
     }
 
     if (telfonnr<=0){
-
-        document.getElementById("bytteuttelefonnr").innerHTML="Du må skrive inn et posetift tall";
+        feil=true
+        document.getElementById("bytteut_telefonnr").innerHTML="Du må skrive inn et posetift tall";
     }
 
     if (!film){
-
-        document.getElementById("bytteut film").innerHTML="du må velge en film"
+        feil=true
+        document.getElementById("bytteut_film").innerHTML="du må velge en film"
+    }
+    if (feil===false) {//pusher biletten hvis det ikke er noe feil i inputstedene
+        bilettliste.push(bilett);
     }
 
-    let ut="";
+    let ut=""; //her så leger jeg til alle variablene man skriver inn til ut objektet
     for (let i of bilettliste){
         ut+="Film: "+i.Film+"<br>"+"Antall: "+i.antall+"<br>"+"Fornavn: "+i.Fornavn+"<br>"+" Etternavn: "+i.Etternavn+"<br>"+
             "Telefonnr: "+telfonnr+"<br>"+"Epost: "+i.Epost+"<hr>"
@@ -54,13 +57,14 @@ function kjop() {
 
     document.getElementById("bytteut").innerHTML=ut
 
-//tømmær fælta
+//tømmer felta
     document.getElementById('Fornavn').value = "";
     document.getElementById('Etternavn').value = "";
     document.getElementById('Telefonnr').value = "";
     document.getElementById('Epost').value = "";
     document.getElementById('antall').value = "";
 }
+
 function slett() {
     bilettliste.length=0;
     document.getElementById("bytteut").innerHTML=""
