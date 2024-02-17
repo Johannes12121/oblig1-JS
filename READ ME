@@ -1,0 +1,16 @@
+Oblig 1
+=======
+OsloMet brukernavn:
+josae4857
+GitHub brukernavn:
+Johannes12121
+Github repo URL:
+https://github.com/data1700-v23/oblig-1-Johannes12121
+Fullt navn:
+Johannes Sæther
+Kort beskrivelse av applikasjon (5-10 setninger):
+inputvalidering, kjekker om tallet er posetive
+tømmer felt etter du har skrevet inn, får rød feilmeling bak når det dekteteres en feil i inputen
+slett felta tømmer arreyet og og sletter alle de synelige biletter,
+jeg legger til en <hr> for å skille de forkllige bilettende
+setter også sammen en ut string med alle atributtendene
